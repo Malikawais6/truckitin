@@ -46,12 +46,14 @@ const Calculator = () => {
     <div className="app">
       <Display result={state.result} />
       <div className="row-wrapper">
-        {state.options.map((row) => {
+        {state.options.map((row, index) => {
           return (
-            <div className="row">
+            <div key={index} className="row">
               {row.map((digit) => {
                 return (
-                  <Button handleClick={handleButtonActions}>{digit}</Button>
+                  <Button key={digit} handleClick={handleButtonActions}>
+                    {digit}
+                  </Button>
                 );
               })}
             </div>
