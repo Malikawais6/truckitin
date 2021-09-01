@@ -22,7 +22,7 @@ const Calculator = () => {
     if (val === "=") {
       setState((st) => ({
         ...st,
-        result: math.evaluate(state.result),
+        result: math.evaluate(state.result).toString(),
       }));
     } else if (val === "C") {
       setState((st) => ({
