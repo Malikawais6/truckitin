@@ -8,10 +8,14 @@
 
 .app {
   margin-top: 50px;
-  width: 300px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 600px;
+  display: grid;
+  grid-template-columns: 3fr 3fr;
 }
-
+.calculator {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-right: 10px;
+}
 .row-wrapper {
   align-self: center;
 }
@@ -38,7 +42,7 @@
   justify-content: flex-end;
   align-items: center;
   height: 30px;
-  width: 90%;
+  width: 90.3%;
   padding: 15px;
   font-weight: bold;
   font-size: 20px;

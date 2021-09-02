@@ -56,23 +56,27 @@ const Calculator = () => {
 
   return (
     <div className="app">
-      <Display result={state.result} />
-      <Display result={state.infix} />
-      <Display result={postfix} />
-      <div className="row-wrapper">
-        {state.options.map((row, index) => {
-          return (
-            <div key={index} className="row">
-              {row.map((digit) => {
-                return (
-                  <Button key={digit} handleClick={handleButtonActions}>
-                    {digit}
-                  </Button>
-                );
-              })}
-            </div>
-          );
-        })}
+      <div className="calculator">
+        <Display result={state.result} />
+        <div className="row-wrapper">
+          {state.options.map((row, index) => {
+            return (
+              <div key={index} className="row">
+                {row.map((digit) => {
+                  return (
+                    <Button key={digit} handleClick={handleButtonActions}>
+                      {digit}
+                    </Button>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className="details">
+        <Display result={state.infix} />
+        <Display result={postfix} />
       </div>
     </div>
   );
